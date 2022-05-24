@@ -8,7 +8,6 @@ from tensorflow.keras.utils import load_img, img_to_array
 import tensorflow.keras.backend as K
 
 
-DATA_DIR = '../../data/LADD_V4/winter_moscow_2018'
 EFFICIENT_NET_SIZES = ((224,7), (240,7), (260,8), (300,9), (380,11), (456,14), (528,16), (600,18))
 
 
@@ -147,7 +146,7 @@ def get_feature_map(bboxes, crop_size, fm_size):
     return  y
 
 
-def crop_sample(idx, CROP_SIZE, FEATURE_MAP_SIZE):
+def crop_sample(idx, CROP_SIZE, FEATURE_MAP_SIZE, DATA_DIR):
     """Crop image for WxH crops and resize every crop to CROP_SIZE 
     return N crops with annotations"""
     N = 4
