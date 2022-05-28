@@ -138,7 +138,7 @@ def get_feature_map(bboxes, crop_size, fm_size):
         bx = int(np.floor( ( (bb[0]+bb[2]-1)/2) / box_size))
         by = int(np.floor( ( (bb[1]+bb[3]-1)/2) / box_size))
         try:
-            y [by, bx] = 1
+            y[by, bx] = 1
         except IndexError:
              print(bboxes)
              print(nn_crop_size)
