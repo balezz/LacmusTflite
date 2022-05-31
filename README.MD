@@ -7,7 +7,7 @@ Vision_API_data_prepare.ipynb
 ![Crop scheme](imgs/crop_scheme.png)
 
 1. Select CROP_SIZE prior to the model input (512 for EfficientDetLiteB3).
-2. Select the number of windows on each axis W, H (default 3x4). 
+2. Select the number of windows on each axis H, W (default 3x4). 
 3. The original images are compressed to a (H*CROP_SIZE, W*CROP_SIZE) (1536x2048).
 4. Crop images and save it to the TESTcrops, TRAINcrops dirs. 
 5. Normalized boxes annotation saved at vision.csv.
